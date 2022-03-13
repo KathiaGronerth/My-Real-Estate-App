@@ -52,11 +52,11 @@ export const houses = [
   },
 ];
 
-export default function HouseItems({ houseData }) {
+export default function HouseItems(props) {
   return (
     <>
       {/* to avoid flash activeOpacity */}
-      {houseData.map((house, index) => (
+      {props.houseData.map((house, index) => (
         <TouchableOpacity
           key={index}
           activeOpacity={1}
