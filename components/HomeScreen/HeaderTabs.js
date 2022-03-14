@@ -5,7 +5,7 @@ export default function HeaderTabs(props) {
   return (
     <View style={{ flexDirection: "row", alignSelf: "center" }}>
       <HeaderButton
-        text="Delivery"
+        text="Sell"
         btnColor="black"
         textColor="white"
         activeTab={props.activeTab}

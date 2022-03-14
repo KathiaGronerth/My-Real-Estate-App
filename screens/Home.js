@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { SafeAreaView, ScrollView, View } from "react-native";
 import { Divider } from "react-native-elements/dist/divider/Divider";
-import BottonTabs from "../components/BottonTabs";
-import Categories from "../components/Categories";
-import HeaderTabs from "../components/HeaderTabs";
-import HouseItems, { houses } from "../components/HouseItems";
-import SearchBar from "../components/SearchBar";
+import BottomTabs from "../components/HomeScreen/BottomTabs";
+import Categories from "../components/HomeScreen/Categories";
+import HeaderTabs from "../components/HomeScreen/HeaderTabs";
+import HouseItems, { houses } from "../components/HomeScreen/HouseItems";
+import SearchBar from "../components/HomeScreen/SearchBar";
 
 const YELP_API_KEY =
   "l_7jCAGIhVqOEOZrBelY3HIBSMdlXUnmkaHYipA1d4d5wJJ6Phb2FLZ_WvRcn1HhejyKuupNuWx-JsjKWQsDO5EByiGQTjRsopHJEy-W24d62aBvMMtiFh-_IBktYnYx";
 
-export default function Home() {
+export default function Home({ navigation }) {
   const [houseData, setHouseData] = useState(houses);
   const [city, setCity] = useState("Austin");
   const [activeTab, setActiveTab] = useState("Delivery");
@@ -41,15 +41,15 @@ export default function Home() {
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
       <View style={{ backgroundColor: "white", padding: 15 }}>
-        <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+        <HeaderTabs houses={houses} />
         <SearchBar cityHandler={setCity} />
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <HouseItems houseData={houseData} />
+        <HouseItems houseData={houseData} navigation={navigation} />
       </ScrollView>
       <Divider width={1} />
-      <BottonTabs />
+      <BottomTabs />
     </SafeAreaView>
   );
 }

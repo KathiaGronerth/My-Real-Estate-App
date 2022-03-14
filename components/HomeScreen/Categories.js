@@ -3,19 +3,19 @@ import React from "react";
 
 const items = [
   {
-    image: require("../assets/HouseCartoon.png"),
+    image: require("../../assets/HouseCartoon.png"),
     text: "Houses",
   },
   {
-    image: require("../assets/ApartmentCartoon.png"),
+    image: require("../../assets/ApartmentCartoon.png"),
     text: "Apartment",
   },
   {
-    image: require("../assets/Land.png"),
+    image: require("../../assets/Land.png"),
     text: "Land",
   },
   {
-    image: require("../assets/condosCartoon.jpeg"),
+    image: require("../../assets/condosCartoon.jpeg"),
     text: "Condos",
   },
 ];

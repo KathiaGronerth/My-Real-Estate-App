@@ -14,7 +14,7 @@ export default function BottonTabs() {
     >
       <Icon icon="home" text="Home" />
       <Icon icon="search" text="Browse" />
-      <Icon icon="receipt" text="Appointments" />
+      <Icon icon="receipt" text="Appointment" />
       <Icon icon="user" text="Account" />
     </View>
   );
